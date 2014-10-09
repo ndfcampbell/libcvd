@@ -42,11 +42,15 @@
 #else
 	#include <stdint.h>
 
-	#ifdef __GNUC__
-		#include <tr1/array>
-		using namespace std::tr1;
-	#else
+	#ifdef __APPLE__
 		#include <array>
+	#else
+		#ifdef __GNUC__
+			#include <tr1/array>
+			using namespace std::tr1;
+		#else
+			#include <array>
+		#endif
 	#endif
 #endif
 
