@@ -157,7 +157,7 @@ struct jpeg_istream_src: public jpeg_source_mgr
 			me->buf[0] = 0xff;
 			me->buf[1] = JPEG_EOI;
 			me->bytes_in_buffer = 2;
-			return true;
+			return TRUE;
 		}
 
 		int c;
